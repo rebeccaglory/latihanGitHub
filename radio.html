@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Latihan Soal</title>
+    <style>
+    #p{
+        color : white;
+        font-size: 50px;
+        font-weight: bold;
+        font-family:Rockwell, Calibri, Monospace;
+        font-style : oblique; }
+    </style>
+</head>
+
+<body background = 'https://images.unsplash.com/photo-1533805994737-558461dcb28e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80'leftmargin="200" rightmargin="200"  >
+    <h1 id=p><b>LATIHAN SOAL</b></h1>
+
+    <h3><b>1. Siapakah Presiden ketiga Republik Indonesia?</b></h3>
+    <input type="radio"name = 'soal1'  value='Prof.B.J.Habibie'>
+    Prof.B.J.Habibie
+    <input type="radio"name = 'soal1'value = 'Abdurahman Wahid'>
+    Abdurahman Wahid
+    <input  type="radio" name = 'soal1' value = ' Ir. Soekarno'>
+    Ir. Soekarno
+    <input type="radio"name = 'soal1' value = ' Joko Widodo '>
+    Joko Widodo
+    <br><br>
+
+    <h3><b>2. Berikut adalah nama-nama bahasa pemrograman, kecuali .... </b></h3>
+    <input  type="radio"name = 'soal2' value='Python'>
+    Python
+    <input type="radio"name = 'soal2'value = 'Micro Bid'>
+   Micro Bid
+    <input  type="radio"name = 'soal2' value = 'Java Script'>
+    Java Script
+    <input type="radio"name = 'soal2' value = 'HTML'>
+    HTML
+
+    <br><br>
+    <h3><b>3. Apa judul lagu yang diduga diplagiat oleh lagu 'Sayang' Via Valen?</b></h3>
+    <input type="radio"name = 'soal3' value=' Qing Fei De Yi'>   
+    Qing Fei De Yi
+    <input type="radio"name = 'soal3'value = 'Ting Hai'>
+    Ting Hai
+    <input type="radio"name = 'soal3' value = 'Mirai E Kiroro'>
+    Mirai E Kiroro
+    <input type="radio"name = 'soal3' value = 'Hau Siang Hau Siang'>
+    Hau Siang Hau Siang
+
+    <br><br>
+    <h3><b>4. Siapakah sosok dibalik topeng Batman? </b></h3>
+    <input type="radio"name = 'soal4' value='Natasha Romanov'>
+    Natasha Romanov
+    <input type="radio"name = 'soal4'value = 'Peter Parker'>
+    Peter Parker
+    <input type="radio"name = 'soal4' value = 'Tony Stark'>
+    Tony Stark
+    <input type="radio"name = 'soal4' value = 'Bruce Wayne'>
+    Bruce Wayne
+<br><br><br>
+    <input type="button" value="SUBMIT"onclick = 'hasil()'>
+<p id='hasil'></p>
+<script>
+    
+function hasil(){
+    var total = 0 
+    var soal1 = document.getElementsByName('soal1')
+    var soal2 = document.getElementsByName('soal2')
+    var soal3 = document.getElementsByName('soal3')
+    var soal4 = document.getElementsByName('soal4')
+if(soal1 === "" || soal2 === '' || soal3 === "" || soal4 === ""){
+    output = 'SILAHKAN ISI TERLEBIH DAHULU'
+}else{
+    for(var i = 0 ; i<soal1.length ; i++){
+        if(soal1[i].checked){
+            soal1 = (soal1[i].value)
+        }
+    }
+    for(var i = 0 ; i<soal2.length ; i++){
+        if(soal2[i].checked){
+            soal2 = (soal2[i].value)
+        }
+    }
+    for(var i = 0 ; i<soal3.length ; i++){
+        if(soal3[i].checked){
+            soal3 = (soal3[i].value)
+        }
+    }
+    for(var i = 0 ; i<soal4.length ; i++){
+        if(soal4[i].checked){
+            soal4 = (soal4[i].value)
+        }
+    }
+ if(soal1 == 'Prof.B.J.Habibie'){
+    total += 25
+ }
+ if (soal2 == 'Micro Bid'){
+     total += 25
+ }
+ if (soal3 == 'Mirai E Kiroro'){
+     total += 25
+ }
+ if (soal4 == 'Bruce Wayne'){
+     total += 25
+ }
+ if(total<60){
+     output = 'Nilai Anda ' + total + ' Silahkan Remedial'
+ }else{
+ output = 'Selamat!! Nilai Akhir Anda ' + total
+ }
+ document.getElementById('hasil').innerHTML = output
+}
+}
+
+
+</script>
+</body>
+</html>
